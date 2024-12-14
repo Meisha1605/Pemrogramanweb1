@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Belajar Ganti Gambar</title>
+        <style>
+            body{
+                background-color: aquamarine;
+            }
+        </style>
+    <script>
+        function tampilGambar(){
+            let nilaiTerpilih = document.getElementById("pilihGambar").value;
+
+            switch(nilaiTerpilih){
+        case "foto1":
+            gambarPilih.src = "img/gorila.png";
+        break;
+        case "foto2":
+            gambarPilih.src = "img/gajah.png";
+        break;
+        case "foto3":
+            gambarPilih.src = "img/singa.png";
+        break;
+        case "foto4":
+            gambarPilih.src = "img/zebra.png";
+        break;
+    }
+    }
+    </script>
+    </head>
+<body>
+    <h2>Ganti Gambar</h2>
+    <label for="pilihGambar">Pilih Gambar:</label>
+    <select id="pilihGambar" onchange="tampilGambar()">
+        <option value="foto1">Gorila</option>
+        <option value="foto2">Gajah</option>
+        <option value="foto3">Singa</option>
+        <option value="foto4">Zebra</option>
+    </select>
+    <br>
+    <img src="gambar/" id="gambarPilih" alt="kosong" width="300">
+</body>
+</html>
